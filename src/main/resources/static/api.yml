@@ -1,0 +1,22 @@
+openapi: '3.0.2'
+info:
+  title: Server Demo API
+  version: '1.0'
+servers:
+  - url: /
+paths:
+  /api/1.0/:
+    get:
+      operationId: ping
+      description: Это метод, который возвращает строку pong в качестве тестового ответа.
+      summary: Ping
+      tags:
+        - General
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
